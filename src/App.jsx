@@ -1,13 +1,14 @@
-import './App.css'
+import ItemListContainer from './components/ItemListContainer'
+import NavBar from './components/NavBar'
+
 
 function App() {
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-500 flex ">
-        Hello world!
-      </h1>
-    </div>
+    <>
+      <NavBar />
+      <ItemListContainer greeting={"Greeting"} />
+    </>
 
   )
 }
