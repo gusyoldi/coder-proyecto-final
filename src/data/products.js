@@ -1,4 +1,4 @@
-export const getItem = () => new Promise((resolve) => {
+export const getProducts = () => new Promise((resolve) => {
     setTimeout(() => {
         resolve([
             {

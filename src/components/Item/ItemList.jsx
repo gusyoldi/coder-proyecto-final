@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getItem } from "../../products"
+import { getProducts } from "../../data/products"
 import Item from "./Item"
 
 const ItemList = () => {
@@ -21,7 +21,7 @@ const ItemList = () => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const data = await getItem()
+                const data = await getProducts()
                 setProducts(data)
             }
             catch (err) {

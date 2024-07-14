@@ -1,29 +1,29 @@
 import { useEffect, useState } from "react"
-import { getItem } from "../../products"
+import { getProduct } from "../../data/singleProduct"
 import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = () => {
-    const [products, setProducts] = useState([])
+    const [product, setProduct] = useState({})
 
     useEffect(() => {
-        const fetchItems = async () => {
+        const fetchItem = async () => {
             try {
-                const data = await getItem()
-                setProducts(data)
+                const data = await getProduct()
+                setProduct(data)
             }
             catch (err) {
                 console.log("Error en el servicio de productos", err)
             }
         }
-        fetchItems()
-        console.log(products)
+        fetchItem()
+        console.log(product)
     }, [])
 
+    const { id, title, description, price, quantity, image } = product
+
     return (
-        <div>
-            {products?.map(({ id, title, description, price, quantity, image }) => (
-                <ItemDetail key={id} title={title} description={description} price={price} quantity={quantity} pictureUrl={image} />
-            ))}
+        <div className="bg-white rounded-m w-[1200px] mx-auto">
+            <ItemDetail key={id} title={title} description={description} price={price} quantity={quantity} pictureUrl='public/vite.svg' />
         </div>
     )
 }
