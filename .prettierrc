@@ -1,4 +1,6 @@
 {
+  "target": "es5",
+  "module": "commonjs",
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": true,
