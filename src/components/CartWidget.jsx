@@ -1,6 +1,5 @@
 import { ShoppingCart } from 'lucide-react'
 
-
 const CartWidget = () => {
     return (
         <div className="flex flex-col p-2">

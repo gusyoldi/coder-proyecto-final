@@ -1,41 +1,32 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import { getProducts } from "../../data/products"
 import Item from "./Item"
+import { filterByCategory } from "./utils"
 
 const ItemList = () => {
     const [products, setProducts] = useState([])
-
-    // useEffect(() => {
-    //     fetch('https://fakestoreapi.com/products')
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error('No pudimos traer los productos')
-    //             }
-    //             return response.json()
-    //         })
-    //         .then(data => setProducts(data))
-    //         .catch(error => console.log("Error en el servicio", error))
-    // }, [])
-
+    const { id: categoryId } = useParams()
 
     useEffect(() => {
         const fetchItems = async () => {
             try {
                 const data = await getProducts()
-                setProducts(data)
+                const filteredByCategoryId = categoryId ? filterByCategory(data, categoryId) : data
+                setProducts(filteredByCategoryId)
             }
             catch (err) {
                 console.log("Error en el servicio de productos", err)
             }
         }
         fetchItems()
-        console.log(products)
-    }, [])
+
+    }, [categoryId])
 
     return (
         <div>
             {products?.map(({ id, title, description, price, quantity, image }) => (
-                <Item key={id} title={title} description={description} price={price} quantity={quantity} pictureUrl={image} />
+                <Item key={id} id={id} title={title} description={description} price={price} quantity={quantity} pictureUrl={image} />
             ))}
         </div>
     )

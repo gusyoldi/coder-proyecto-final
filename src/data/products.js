@@ -3,32 +3,100 @@ export const getProducts = () => new Promise((resolve) => {
         resolve([
             {
                 id: 1,
-                title: 'Celular',
-                price: 120300,
+                title: 'iPhone 14 Pro',
+                price: 99900,
                 quantity: 5,
-                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias exceptuia animi, id est laborum et dolorum fuga. Et hasimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                description: "El iPhone 14 Pro presenta un diseño revolucionario con una cámara de 48 MP, pantalla Super Retina XDR de 6.1 pulgadas y el chip A16 Bionic para un rendimiento sin igual. Disponible en varios colores.",
+                category: 'phones',
             },
             {
                 id: 2,
-                title: 'Notebook',
-                price: 520000,
-                quantity: 2,
-                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum iis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                title: 'MacBook Pro 16"',
+                price: 239900,
+                quantity: 8,
+                description: "El MacBook Pro de 16 pulgadas cuenta con el chip M1 Pro para un rendimiento increíblemente rápido, una batería de larga duración y una impresionante pantalla Liquid Retina XDR.",
+                category: 'electronics',
             },
             {
                 id: 3,
-                title: 'Zapatos',
-                price: 98000,
-                quantity: 3,
-                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique t et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                title: 'iPad Air',
+                price: 59900,
+                quantity: 12,
+                description: "El iPad Air con chip M1 ofrece una experiencia poderosa en un diseño delgado y ligero, con una pantalla Liquid Retina de 10.9 pulgadas, compatibilidad con Apple Pencil y Magic Keyboard.",
+                category: 'electronics',
             },
             {
                 id: 4,
-                title: 'Guitarra',
-                price: 250000,
-                quantity: 4,
-                description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique t et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                title: 'Apple Watch Series 8',
+                price: 39900,
+                quantity: 20,
+                description: "El Apple Watch Series 8 incluye un sensor de temperatura corporal, seguimiento avanzado del sueño, detección de caídas y un diseño resistente al agua para todas tus aventuras.",
+                category: 'wearables',
+            },
+            {
+                id: 5,
+                title: 'AirPods Pro',
+                price: 24900,
+                quantity: 30,
+                description: "Los AirPods Pro ofrecen cancelación activa de ruido, modo de transparencia, ajuste personalizable y audio espacial para una experiencia auditiva inigualable.",
+                category: 'accessories',
+            },
+            {
+                id: 6,
+                title: 'Samsung Galaxy S23',
+                price: 79900,
+                quantity: 10,
+                description: "El Samsung Galaxy S23 ofrece una experiencia premium con una pantalla Dynamic AMOLED 2X de 6.2 pulgadas, cámara triple de 50 MP y un rendimiento excepcional gracias al procesador Snapdragon 8 Gen 2.",
+                category: 'phones',
+            },
+            {
+                id: 7,
+                title: 'Dell XPS 13',
+                price: 149900,
+                quantity: 7,
+                description: "La Dell XPS 13 es una laptop ultradelgada con pantalla InfinityEdge de 13.4 pulgadas, procesador Intel Core i7 de 11ª generación y batería de larga duración, ideal para profesionales en movimiento.",
+                category: 'electronics',
+            },
+            {
+                id: 8,
+                title: 'Sony WH-1000XM4',
+                price: 34900,
+                quantity: 25,
+                description: "Los audífonos Sony WH-1000XM4 ofrecen la mejor cancelación de ruido de su clase, sonido de alta calidad, y una comodidad superior para largas sesiones de escucha.",
+                category: 'accessories',
+            },
+            {
+                id: 9,
+                title: 'GoPro HERO11',
+                price: 49900,
+                quantity: 15,
+                description: "La GoPro HERO11 captura videos 5K y fotos de 20 MP con una calidad impresionante. Es resistente al agua, tiene estabilización HyperSmooth 4.0 y es perfecta para cualquier aventura.",
+                category: 'cameras',
+            },
+            {
+                id: 10,
+                title: 'Amazon Echo Dot (4ª generación)',
+                price: 4900,
+                quantity: 40,
+                description: "El Amazon Echo Dot de 4ª generación es un altavoz inteligente con Alexa, que ofrece un sonido de calidad y un diseño compacto, perfecto para cualquier habitación de la casa.",
+                category: 'smart_home',
+            },
+            {
+                id: 11,
+                title: 'Kindle Paperwhite',
+                price: 12900,
+                quantity: 18,
+                description: "El Kindle Paperwhite es un lector de libros electrónicos con pantalla de alta resolución de 6.8 pulgadas, luz ajustable y resistencia al agua, ideal para leer en cualquier lugar.",
+                category: 'electronics',
+            },
+            {
+                id: 12,
+                title: 'Fitbit Charge 5',
+                price: 17900,
+                quantity: 22,
+                description: "El Fitbit Charge 5 ofrece seguimiento avanzado de actividad física y salud, GPS incorporado, monitorización del estrés y del sueño, y una batería de larga duración.",
+                category: 'wearables',
             }
         ]);
-    }, 2000);
+    }, 1000);
 });

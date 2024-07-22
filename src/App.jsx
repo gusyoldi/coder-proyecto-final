@@ -1,15 +1,22 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ItemDetailContainer from './components/Item/ItemDetailContainer'
 import ItemListContainer from './components/Item/ItemListContainer'
-import NavBar from './components/NavBar'
+import Layout from './components/Layout'
+import NotFound from './components/NotFound'
 
 function App() {
 
   return (
-    <div className='bg-gray-100 pb-14 space-y-12'>
-      <NavBar />
-      <ItemListContainer />
-      <ItemDetailContainer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Layout />} >
+          <Route index element={<ItemListContainer />} />
+          <Route path='category/:id' element={<ItemListContainer />} />
+          <Route path='item/:id' element={<ItemDetailContainer />} />
+          <Route path='*' element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter >
 
   )
 }
